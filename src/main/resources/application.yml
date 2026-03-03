@@ -4,3 +4,6 @@ spring:
     username: root
     password: C123!
 
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
