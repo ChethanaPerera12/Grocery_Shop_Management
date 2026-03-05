@@ -1,14 +1,13 @@
-package edu.icet.service.Impl;
+package edu.icet.repository.Impl;
 
 import edu.icet.model.Item;
-import edu.icet.repository.CustomerRepository;
-import edu.icet.service.ItemService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import edu.icet.repository.ItemRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-@Service
-public class ItemServiceImpl implements ItemService {
+
+@Repository
+public class ItemRepositoryImpl implements ItemRepository {
     @Override
     public List<Item> getItem() {
         return List.of();
@@ -34,4 +33,3 @@ public class ItemServiceImpl implements ItemService {
         return null;
     }
 }
-

@@ -1,12 +1,10 @@
-package edu.icet.service;
+package edu.icet.repository;
 
-import edu.icet.model.Customer;
 import edu.icet.model.Item;
-import edu.icet.repository.CustomerRepository;
 
 import java.util.List;
 
-public interface ItemService {
+public interface ItemRepository {
     List<Item> getItem();
     boolean addItem(Item item);
     boolean updateItem(Item item);
