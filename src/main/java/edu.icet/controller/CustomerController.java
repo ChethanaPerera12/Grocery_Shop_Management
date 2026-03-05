@@ -14,8 +14,8 @@ public class CustomerController {
     CustomerService customerService;
 
     @GetMapping("/get-all")
-    public List<Customer> getAll(){return customerService.getAll();
-    }
+    public List<Customer> getAll()
+    {return customerService.getAll();}
     @PostMapping("/add-customer")
     public boolean addCustomer(@RequestBody Customer customer){
         return customerService.addCustomer(customer);
