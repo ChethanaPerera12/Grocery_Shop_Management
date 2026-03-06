@@ -2,7 +2,6 @@ package edu.icet.controller;
 
 import edu.icet.model.Item;
 import edu.icet.service.ItemService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,10 +9,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/item")
 @CrossOrigin
-@RequiredArgsConstructor
 public class ItemController {
 
-    private final ItemService itemService;
+    @Autowired
+    ItemService itemService;
 
     @GetMapping("/get-all-items")
     public List<Item> getItem(){
