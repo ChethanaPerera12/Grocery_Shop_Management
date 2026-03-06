@@ -11,28 +11,28 @@ import java.util.List;
 @RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
     private final OrderRepository orderRepository;
-    @Override
-    public boolean updateOrder(Order order) {
-        return false;
-    }
 
     @Override
+    public boolean updateOrder(Order order) {
+        return orderRepository.updateOrder(order);
+    }
+    @Override
     public boolean addOrder(Order order) {
-        return false;
+        return orderRepository.addOrder();
     }
 
     @Override
     public boolean deleteOrder(String id) {
-        return false;
+        return orderRepository.deleteOrder(id);
     }
 
     @Override
     public List<Order> getOrder() {
-        return List.of();
+        return orderRepository.getOrder();
     }
 
     @Override
     public Order searchById(String id) {
-        return null;
+        return orderRepository.searchById(id);
     }
 }
